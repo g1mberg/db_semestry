@@ -174,9 +174,6 @@ COMMENT ON COLUMN player_info."steam_account"."birthday" IS 'Дата рожде
 
 ------------------------------------------------------
 
--- Внешние ключи
--- 🔗 Внешние ключи с указанием схем
-
 ALTER TABLE match_info."player_match_stat"
     ADD FOREIGN KEY("hero_id")
     REFERENCES static."heroes"("hero_id")
@@ -265,3 +262,4 @@ TABLESPACE index_space;
 CREATE INDEX CONCURRENTLY idx_steam_account_login
 ON player_info.steam_account (login)
 TABLESPACE index_space;
+
